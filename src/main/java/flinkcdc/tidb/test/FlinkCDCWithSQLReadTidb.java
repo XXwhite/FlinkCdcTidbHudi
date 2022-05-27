@@ -57,12 +57,12 @@ public class FlinkCDCWithSQLReadTidb {
                 " 'connector' = 'tidb-cdc',\n" +
                 " 'tikv.grpc.timeout_in_ms' = '30000',\n" +
                 " 'pd-addresses' = '10.102.6.78:12379',\n" +
-                " 'database-name' = 'hs_count',\n" +
+                " 'database-name' = 'cdc_test',\n" +
                 " 'table-name' = 'hs_wide_new',\n" +
                 " 'scan.startup.mode' = 'latest-offset',\n" +
-                " 'tikv.batch_get_concurrency'='2',\n" +
+                " 'tikv.batch_get_concurrency'='200',\n" +
                 " 'tikv.grpc.scan_timeout_in_ms'='30000'\n" +
-                " )");//
+                " )");//initial
         tableEnv.executeSql("select * from hs_wide_new").print();
 
 
