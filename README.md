@@ -1,0 +1,1 @@
+分别通过代码和sql的方式使用FlinkCDC消费Tidb数据加载到Hudi
